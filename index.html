@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>XRDimage-doc Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="sidebar navbar">
+
+            <h1 class="topbar">XRDimage-doc</h1>
+
+
+            <div class="relations">
+              <h3>Navigation</h3>
+
+              <div class="searchbox">
+                <form class="search" action="search.html" method="get">
+                    <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search Docs" spellcheck="false"/>
+                </form>
+              </div>
+              <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="GettingStarted.html">Getting Started</a></li>
+                <li><a href="Releases.html">Releases</a></li>
+              </ul>
+            </div>
+            
+
+            <div class="navbar">
+                <ul>
+                  <li class="dropdown">
+                    <a href="processing.html" class="dropbtn">Image Preprocessing</a>
+                    <div class="dropdown-content">
+                      <a onclick="window.location.href = 'processing.html#save-image';">save_img</a>
+                      <a onclick="window.location.href = 'processing.html#transformation';">image_operations</a>
+                    </div>
+                  </li>
+              
+                  <li class="dropdown">
+                    <a href="darkcorrection.html" class="dropbtn">Dark Correction</a>
+                    <div class="dropdown-content">
+                      <a onclick="window.location.href = 'darkcorrection.html#dark-correction';">dark_correction</a>
+                    </div>
+                  </li>
+              
+                  <li class="dropdown">
+                    <a href="centering.html" class="dropbtn">Image Centering</a>
+                    <div class="dropdown-content">
+                      <a onclick="window.location.href = 'centering.html#create-circular-mask';">create_circular_mask</a>
+                      <a onclick="window.location.href = 'centering.html#define-mask';">define_mask</a>
+                      <a onclick="window.location.href = 'centering.html#add-margin';">add_margin</a>
+                      <a onclick="window.location.href = 'centering.html#find-center';">find_center</a>
+                      <a onclick="window.location.href = 'centering.html#register-image';">register_image</a>
+                    </div>
+                  </li>
+              
+                  <li class="dropdown">
+                    <a href="temperatureindependent.html" class="dropbtn">Temperature Independent</a>
+                    <div class="dropdown-content">
+                      <a href="temperatureindependent.html#add-margin">add_margin</a>
+                      <a href="temperatureindependent.html#reshape">reshape</a>
+                      <a href="temperatureindependent.html#resize-image">resize_image</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>    
+          </div>      
+      </div>          
+      <div class="content">
+        <div class = "left-margin"></div>
+        <h1 class="topbar">Welcome to XRDImage's documentation!</h1>
+        <div class = "right-margin"></div>
+        <div class="section" id="xrd-image-preprocessing">
+          <h2>XRDImage Overview</h2>
+          <h3>
+            XRDImage is a Python 3 package developed by the SDLE Research Center at Case Western
+            Reserve University in Cleveland, OH.
+            <br><br>
+            XRDImage contains functions required to preprocess, dark correct, and center XRD images. It also
+            consists of functions required to make XRD images temperature independent. In 
+            <span><a href="Releases.html"><u>v.0.0.4</u></a></span>, we've added ring segmentation, ring clustering algorithms,
+            and ellipse fitting algorithms.
+            <br><br>
+            The user inputs the file path, and output folder, dark file path, and 
+            a reference image path, and the output will be a folder full of 
+            images processed by our dark correction, centering, resizing, and
+            temperature independence scripts.
+          </h3>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer">
+        &copy;2022, WeiQi Yue, Gabriel Ponon, Pawan K. Tripathi, Roger H. French.
+        |
+        Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.0</a> &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+    </div>
+  </body>
+</html>

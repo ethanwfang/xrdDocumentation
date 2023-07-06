@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>XRDimage-doc Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="sidebar navbar">
+
+            <h1 class="topbar">XRDimage-doc</h1>
+
+
+            <div class="relations">
+              <h3>Navigation</h3>
+
+              <div class="searchbox">
+                <form class="search" action="search.html" method="get">
+                    <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search Docs" spellcheck="false"/>
+                </form>
+              </div>
+              <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="GettingStarted.html">Getting Started</a></li>
+                <li><a href="Releases.html">Releases</a></li>
+              </ul>
+            </div>
+            
+
+            <div class="navbar">
+                <ul>
+                  <li class="dropdown">
+                    <a href="processing.html" class="dropbtn">Image Preprocessing</a>
+                    <div class="dropdown-content">
+                      <a onclick="window.location.href = 'processing.html#save-image';">save_img</a>
+                      <a onclick="window.location.href = 'processing.html#transformation';">image_operations</a>
+                    </div>
+                  </li>
+              
+                  <li class="dropdown">
+                    <a href="darkcorrection.html" class="dropbtn">Dark Correction</a>
+                    <div class="dropdown-content">
+                      <a onclick="window.location.href = 'darkcorrection.html#dark-correction';">dark_correction</a>
+                    </div>
+                  </li>
+              
+                  <li class="dropdown">
+                    <a href="centering.html" class="dropbtn">Image Centering</a>
+                    <div class="dropdown-content">
+                      <a onclick="window.location.href = 'centering.html#create-circular-mask';">create_circular_mask</a>
+                      <a onclick="window.location.href = 'centering.html#define-mask';">define_mask</a>
+                      <a onclick="window.location.href = 'centering.html#add-margin';">add_margin</a>
+                      <a onclick="window.location.href = 'centering.html#find-center';">find_center</a>
+                      <a onclick="window.location.href = 'centering.html#register-image';">register_image</a>
+                    </div>
+                  </li>
+              
+                  <li class="dropdown">
+                    <a href="temperatureindependent.html" class="dropbtn">Temperature Independent</a>
+                    <div class="dropdown-content">
+                      <a href="temperatureindependent.html#add-margin">add_margin</a>
+                      <a href="temperatureindependent.html#reshape">reshape</a>
+                      <a href="temperatureindependent.html#resize-image">resize_image</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>    
+          </div>      
+      </div>                     
+      <div class="content">
+        <div class = "left-margin"></div>
+        <h1 class="topbar">Welcome to XRDImage's documentation!</h1>
+        <div class = "right-margin"></div>
+
+        <h2>Image Processing</h2>
+      
+
+        <div id="save-image" class="subsection" style="transition: color 0.3s;">
+          <h3 style="display: inline-block;">
+            <a href="#save-image" style="color: inherit; text-decoration: none;">
+              <span onmouseover="this.style.color='#00ff00'; this.style.textShadow='0 0 5px #00ff00';"
+                    onmouseout="this.style.color='#ccc'; this.style.textShadow='none';">
+                <strong><em>Save Image</em></strong>
+              </span>
+            </a>
+          </h3>
+        </div class = "section">
+          <p>
+            Save image as TIFF file to specified file path.
+          </p>
+          <pre><code>save_img(img, file_path)</code></pre>
+          <h4>Keyword arguments:</h4>
+          <ul>
+            <li><code>img</code>: PIL image to save.</li>
+            <li><code>file_path</code>: Complete file path for where to save the file.</li>
+            <li><code>is_dry_run</code>: Specify whether to perform a dry-run operation (default: False).</li>
+          </ul>      
+          
+          <div id="transformation" class="subsection" style="transition: color 0.3s;">
+            <h3 style="display: inline-block;">
+              <a href="#transformation" style="color: inherit; text-decoration: none;">
+                <span onmouseover="this.style.color='#00ff00'; this.style.textShadow='0 0 5px #00ff00';"
+                      onmouseout="this.style.color='#ccc'; this.style.textShadow='none';">
+                  <strong><em>Preprocessing Transformation</em></strong>
+                </span>
+              </a>
+            </h3>
+          </div>
+          <p>
+            Apply preprocessing transformations to image and save to disk.
+          </p>
+          <pre><code>image_operations(file_path, output_folder, dark_file_path, ref_img_path)</code></pre>
+          <h4>Keyword arguments:</h4>
+          <ul>
+            <li><code>file_path</code>: The full file path to the image input.</li>
+            <li><code>output_folder</code>: The folder for which to save the outputs.</li>
+            <li><code>dark_file_path</code>: The full file path to the dark image.</li>
+            <li><code>ref_img_path</code>: The full path to the reference image to be used for resize.</li>
+          </ul>
+        </div>
+    </div>
+    </body>
+</html>
+        
